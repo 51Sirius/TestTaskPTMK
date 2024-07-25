@@ -1,7 +1,8 @@
 from datetime import date
 
 class Employee:
-    def __init__(self, first_name: str, last_name: str, midle_name: str, gender: str, birthdate: date):
+    def __init__(self, employee_id: int, first_name: str, last_name: str, midle_name: str, gender: str, birthdate: date):
+        self.reference = employee_id
         self.first_name = first_name
         self.midle_name = midle_name
         self.last_name = last_name
