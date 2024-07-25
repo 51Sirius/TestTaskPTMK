@@ -1,16 +1,17 @@
 from datetime import date
 
+
 class Employee:
-    def __init__(self, first_name: str, last_name: str, midle_name: str, gender: str, birthdate: date):
+    def __init__(self, first_name: str, last_name: str, middle_name: str, gender: str, birthday: str):
         self.first_name = first_name
-        self.midle_name = midle_name
+        self.middle_name = middle_name
         self.last_name = last_name
         self.gender = gender
-        self.birthdate = birthdate
+        self.birthday = birthday
 
     def __repr__(self):
         return f"<Employee {self.full_name}>"
 
     @property
     def full_name(self) -> str:
-        return self.last_name + self.first_name  + self.midle_name
+        return self.last_name + self.first_name + self.middle_name
