@@ -14,7 +14,7 @@ employee = Table(
     Column("first_name", String(255)),
     Column("last_name", String(255)),
     Column("middle_name", String(255)),
-    Column("birthday", String(255), nullable=True),
+    Column("birthday", Date),
     Column("gender", String(255))
 )
 
