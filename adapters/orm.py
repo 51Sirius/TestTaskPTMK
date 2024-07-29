@@ -12,10 +12,10 @@ employee = Table(
     metadata,
     Column("id", Integer, primary_key=True, autoincrement=True),
     Column("first_name", String(255)),
-    Column("last_name", String(255)),
+    Column("last_name", String(255), index=True),
     Column("middle_name", String(255)),
     Column("birthday", Date),
-    Column("gender", String(255))
+    Column("gender", String(10), index=True)
 )
 
 

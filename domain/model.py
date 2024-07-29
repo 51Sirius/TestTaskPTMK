@@ -1,5 +1,7 @@
 from datetime import date
 import datetime
+
+
 class Employee:
     def __init__(self, first_name: str, last_name: str, middle_name: str, gender: str, birthday: date):
         self.first_name = first_name
@@ -17,5 +19,5 @@ class Employee:
 
     @property
     def years(self) -> int:
-        now = datetime.datetime.now()
-        return (now-before).years
+        now = datetime.datetime.now().date()
+        return int((now - self.birthday).days / 365)
